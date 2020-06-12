@@ -3,11 +3,12 @@
 
 # Author: Andrii Valchuk
 
+import os
 import time
 from wand.image import Image as wimg
 from progress.bar import IncrementalBar
 
-fileList = list(map(str,input('Enter a list of images with a space: ').split(' ')))
+fileList = os.listdir(input('Enter a directory of images: '))
 fileName = input('Enter pdf file name: ')
 
 print('Start conversion, pleas wait...')
