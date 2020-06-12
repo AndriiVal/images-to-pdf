@@ -16,6 +16,6 @@ Python Modules
 Usage
 --------------
  - To run this tool in console enter "python3 path/to/the/img_to_pdf.py"
- - Then enter a list of images with a space
+ - Then enter a directory of images
  - Then enter "path/to/the/your_file.pdf"
  - Next, wait for the completion
