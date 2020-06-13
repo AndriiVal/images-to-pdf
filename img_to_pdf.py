@@ -4,24 +4,20 @@
 # Author: Andrii Valchuk
 
 import os
-import stat
 import time
+
 from wand.image import Image as wimg
 from progress.bar import IncrementalBar
 
-def has_hidden_attribute(filepath):
-    return bool(os.stat(filepath).st_file_attributes & stat.FILE_ATTRIBUTE_HIDDEN)
-
 imgDir = input('Enter a directory of images: ')
+fileName = input('Enter pdf file name: ')
 
 filesList = os.listdir(imgDir)
 fileList = []
 for name in filesList:
     fullname = os.path.join(imgDir, name)
-    if os.path.isfile(fullname) and not has_hidden_attribute(fullname):
+    if os.path.isfile(fullname) and (fullname.endswith('.jpg') or fullname.endswith('.png')):
         fileList.append(fullname)
-
-fileName = input('Enter pdf file name: ')
 
 print('Start conversion, pleas wait...')
 
