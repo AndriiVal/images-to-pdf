@@ -20,6 +20,6 @@ Usage
  - Then enter "path/to/the/your_file.pdf"
  - Next, wait for the completion
 
-## License
-
-Windows version MIT, Linux version GNU GPL 3
+License
+---------------
+GNU GPL 3
